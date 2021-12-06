@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 });
 
 
-app.get('/:page',(req, res) => {
+app.get('/shortener/:page',(req, res) => {
     Link.findOne({short:req.params.page})
     .then(link => {
         if(!link) {
@@ -45,7 +45,8 @@ app.get('/:page',(req, res) => {
     });
 });
 
-app.get('/',(req, res) => {
+app.get('/shortener',(req, res) => {
+    res.sendFile(__dirname + '/client/build/index.html')
     res.json({datas:"home!"});
 });
 
