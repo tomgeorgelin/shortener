@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "install-client": "cd client && npm i",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build"
+  },
+  "engines": {
+    "node": "16.13.1"
+  },
+  "name": "shortener",
+  "version": "1.0.0",
+  "description": "links shortener",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC" 
+}
