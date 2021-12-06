@@ -46,8 +46,8 @@ app.get('/shortener/:page',(req, res) => {
 });
 
 app.get('/shortener',(req, res) => {
-    res.sendFile(__dirname + '/client/build/index.html')
-    res.json({datas:"home!"});
+    res.sendFile(__dirname + '/client/build/index.html');
+    //res.json({datas:"home!"});
 });
 
 app.post('/api',(req,res) => {
