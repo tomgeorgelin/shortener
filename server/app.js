@@ -59,10 +59,9 @@ app.post('/api',(req,res) => {
     link.save()
         .then((e) => {
             res.status(201);
-            res.json({code:req.protocol + '://' + req.get('host') + '/' + e.short});
+            res.json({code:req.protocol + '://' + req.get('host') + '/shortener/' + e.short});
         })
         .catch(error => res.status(400).json({ error }));
-
 });
 
 function makeId(length) {
